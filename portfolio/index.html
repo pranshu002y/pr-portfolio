@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranshu Yadav | ASD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+        @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #1f2029;
+            overflow: hidden;
+            height: 100vh;
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+            perspective: 800px;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        ::selection {
+            color: #c4c3ca;
+            background-color: #000;
+        }
+
+        ::-moz-selection {
+            color: #c4c3ca;
+            background-color: #000;
+        }
+
+        /* #Cursor
+================================================== */
+
+        /* .cursor,
+.cursor2,
+.cursor3,cursor4{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3,cursor4{
+	height: 36px;
+	width: 36px;
+	z-index:99998;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover,
+.cursor4.hover{
+	-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+	transform:scale(2) translateX(-25%) translateY(-25%);
+	border:none
+}
+.cursor2{
+	border: 2px solid #fff;
+}
+.cursor2.hover{
+	background: rgba(255,255,255,1);
+	border-color: transparent;
+}
+
+@media screen and (max-width: 1200px){
+	.cursor,.cursor2,.cursor3{
+		display: none
+	}
+} */
+
+        /* #Primary style
+================================================== */
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1684755343416-f402793a7d23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1) rotateX(0);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+            transform-origin: center top;
+        }
+
+        .hero-section h1 {
+            color: #fff;
+            font-size: 5vw;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .hero-section .dancing {
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 1px;
+            color: #866BAF;
+            font-size: 26px;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width: 580px) {
+            .hero-section .dancing {
+                font-size: 18px;
+            }
+        }
+
+        .hero-section p {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p span {
+            margin-left: 15px;
+            margin-right: 15px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-bottom: 35px;
+        }
+
+        .hero-section p span:before {
+            position: absolute;
+            content: '';
+            bottom: 10px;
+            left: 50%;
+            height: 30px;
+            width: 30px;
+            margin-left: -15px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px 30px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/down.svg');
+            opacity: 0.2;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .hero-section p span:hover:before {
+            opacity: 1;
+            bottom: 5px;
+        }
+
+        body.about-on .hero-section {
+            transform: scale(0.75);
+            -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+        }
+
+        body.contact-on .hero-section {
+            transform: scale(0.75);
+            -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+        }
+
+        body.travel-on .hero-section {
+            transform: rotateX(-10deg);
+            -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+        }
+
+        body.wildlife-on .hero-section {
+            transform: rotateX(-10deg);
+            -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+        }
+
+        body.nature-on .hero-section {
+            transform: rotateX(-10deg);
+            -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+        }
+
+        .about-text {
+            position: absolute;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+            top: 50%;
+            left: 40px;
+            cursor: pointer;
+            z-index: 2;
+            -webkit-writing-mode: vertical-lr;
+            writing-mode: vertical-lr;
+            transform: translateY(-50%);
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .about-text:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: -25px;
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px 30px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/left.svg');
+            opacity: 0.2;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .about-text:hover:before {
+            opacity: 1;
+            left: -30px;
+        }
+
+        .about-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            height: 100vh;
+            background-color: rgba(31, 32, 41, 1);
+            transform: translateX(-100%);
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+            z-index: 10;
+        }
+
+        body.about-on .about-section {
+            transform: translateX(0);
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+        }
+
+        .about-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            display: block;
+            overflow: hidden;
+            height: 30px;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 36px 36px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/close.svg');
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .about-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .section-center {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .about-section img {
+            width: 200px;
+            min-height: 200px;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 50%;
+        }
+
+        .about-section p span {
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 1px;
+            color: #866BAF;
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .contact-text {
+            position: absolute;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+            top: 50%;
+            right: 40px;
+            cursor: pointer;
+            z-index: 2;
+            -webkit-writing-mode: vertical-lr;
+            writing-mode: vertical-lr;
+            transform: translateY(-50%) rotate(180deg);
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .contact-text:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: -25px;
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px 30px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/left.svg');
+            opacity: 0.2;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+        }
+
+        .contact-text:hover:before {
+            opacity: 1;
+            left: -30px;
+        }
+
+        .contact-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            height: 100vh;
+            background-color: rgba(31, 32, 41, 1);
+            transform: translateX(100%);
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+            z-index: 10;
+        }
+
+        body.contact-on .contact-section {
+            transform: translateX(0);
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+        }
+
+        .contact-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            display: block;
+            overflow: hidden;
+            height: 30px;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 36px 36px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/close.svg');
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .contact-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .contact-section a {
+            margin: 0 20px;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .contact-section .social a {
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #866BAF;
+        }
+
+        @media screen and (max-width: 580px) {
+            .contact-section a {
+                font-size: 17px;
+            }
+
+            .contact-section .social a {
+                margin-left: 3px;
+                margin-right: 3px;
+                font-size: 13px;
+                letter-spacing: 0;
+            }
+        }
+
+        .travel-section,
+        .wildlife-section,
+        .nature-section {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            padding: 100px 0;
+            width: 100%;
+            height: 100vh;
+            display: block;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: rgba(31, 32, 41, 1);
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+            z-index: 10;
+        }
+
+        .travel-close,
+        .wildlife-close,
+        .nature-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            display: block;
+            overflow: hidden;
+            height: 30px;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 36px 36px;
+            background-image: url('http://www.ivang-design.com/svg-load/portfolio/close.svg');
+            cursor: pointer;
+            z-index: 11;
+        }
+
+        .travel-close:hover,
+        .wildlife-close:hover,
+        .nature-close:hover {
+            transform: rotate(90deg);
+        }
+
+        body.travel-on .travel-section {
+            top: 0;
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+        }
+
+        body.wildlife-on .wildlife-section {
+            top: 0;
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+        }
+
+        body.nature-on .nature-section {
+            top: 0;
+            -webkit-transition-delay: 400ms;
+            transition-delay: 400ms;
+        }
+
+        .travel-section img,
+        .wildlife-section img,
+        .nature-section img {
+            margin-top: 30px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .travel-section h3,
+        .wildlife-section h3,
+        .nature-section h3 {
+            font-size: 44px;
+            line-height: 1.3;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .travel-section p,
+        .wildlife-section p,
+        .nature-section p {
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 1px;
+        }
+
+        .travel-section p span,
+        .wildlife-section p span,
+        .nature-section p span {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: #866BAF;
+        }
+
+        /* #Link to page
+================================================== */
+
+        .link-to-portfolio {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 200;
+            cursor: pointer;
+            width: 50px;
+            color: white;
+                    
+            height: 50px;
+            text-align: center;
+            border-radius: 3px;
+            background-position: center center;
+            background-size: 65%;
+            background-repeat: no-repeat;
+            background-image: url('https://cdn.pixabay.com/photo/2016/12/18/13/44/download-1915749_1280.png');
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, .1);
+            transition: opacity .2s, border-radius .2s, box-shadow .2s;
+            transition-timing-function: ease-out;
+        }
+
+        .link-to-portfolio:hover {
+            opacity: 0.8;
+            border-radius: 50%;
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, .1);
+        }
+        .text-center-1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="about-text hover-target">About</div>
+        <div class="contact-text hover-target">Contact</div>
+        <div class="section-center">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center-1">
+                        <h1>Pranshu Yadav</h1>
+                    </div>
+                    <div class="col-12 text-center-1 mb-2">
+                        <div class="dancing">Frontend Developer</div>
+                    </div>
+                    <div class="col-12 text-center-1 mt-4 mt-lg-5">
+                        <p>
+                            <span class="travel hover-target">Skills</span>
+                            <span class="wildlife hover-target">Certifications</span>
+                            <span class="nature hover-target">Work Experience</span>
+                            <span class="nature hover-target">Projects</span>
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="about-section">
+        <div class="about-close hover-target"></div>
+        <div class="section-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQFQP6ODxgUOqw/profile-displayphoto-shrink_800_800/0/1676209192885?e=1691020800&v=beta&t=z8ffpRx-pE4b4UXXabF8eIAiUFtPOGTZesenuLvDoFU"
+                            alt="">
+                    </div>
+                    <div class="col-lg-8 text-center mt-4">
+                        <p>An enthusiastic and self motivated Frontend Developer, equipped with excellent Designing
+                            skills ,creative and problem solving skills. I’m
+                            open to new technologies and seek new challenges.</p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <p><span>Pranshu Yadav</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-close hover-target"></div>
+        <div class="section-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <a href="#" class="hover-target">pranshu002y@gmail.com</a>
+                    </div>
+                    <div class="col-12 text-center social mt-4">
+                        <a href="https://www.instagram.com/pranshu_yadav15/" class="hover-target">Instagram</a>
+                        <a href="https://github.com/pranshu002y" class="hover-target">Github</a>
+                        <a href="https://www.linkedin.com/in/pranshu-yadav-086b28192/" class="hover-target">Linkedin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="travel-section">
+        <div class="travel-close hover-target"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3>Technical Skills</h3>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Html</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Css</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Javascript</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Jquery</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>React Js</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Bootstrap</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Material Ui</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>SQL</span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>C/C++ </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Python</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <p>
+                        aperture: ƒ/5.6<br>
+                        exposure time: 1/1000<br>
+                        ISO: 80
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <h3>Professional Skills</h3>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Team Player
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Adaptable
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Punctual
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span> Dependable
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span> Event management
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span> Digital Marketing
+                        </span></p>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span> Marketing
+                        </span></p>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wildlife-section">
+        <div class="wildlife-close hover-target"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3>Certifications</h3>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>REACT JS FOR WEB DEVELOPMENT | CIPHER SCHOOL | JUL 2022</span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+
+                <div class="col-12 mt-3 text-center">
+                    <p><span> React (Basic) Certificate | HACKERRANK | SEP 2022</span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+
+                <div class="col-12 mt-3 text-center">
+                    <p><span> Python (Basic) Certificate | HACKERRANK | DEC 2021 </span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>JAVASCRIPT FOR WEB DEVELOPMENT | BOARD INFINITY | SEP 2021 </span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>SQL FOR DATA SCIENCE | COURSEERA| JUL 2021
+                        </span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>SQL (Basic) Certificate | HACKERRANK | JUN 2021 </span></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nature-section">
+        <div class="nature-close hover-target"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>Associate Software Developer | Venturepact | January 2023 – Present</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul>
+                        <li>
+                            Developing and launching a web application using the Front End technologies that meets the
+                            requirements of
+                            your company and its users.
+                        </li>
+                        <li>Successfully collaborating with cross-functional teams, such as designers, product managers,
+                            and other
+                            developers, to deliver high-quality web applications on time and within budget.</li>
+                        <li>Staying up-to-date with the latest trends and technologies in web development and
+                            implementing them in your
+                            work to improve the quality of your web applications.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="nature-section">
+        <div class="nature-close hover-target"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h3> Projects</h3>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p><span>LEARN CENTRAL | HTML, CSS, JAVASCRIPT , REACT , NODEJS | MAY 2023</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul>
+                        <li>
+                            Overview: The software is a SaaS product designed for universities and schools to manage their data for teachers, students, and staff members. It provides features such as data management, assigning sections and tasks, admin management, and a responsive design for mobile, tablet, and laptop modes. It utilizes React components for building user interfaces and fetches data using API calls. The software is likely integrated with a database for storing and retrieving information. It also includes team management features and may utilize GitLab for version control and collaboration. The main outcome is the efficient functioning of React components, API fetching, database binding, team management, and the use of GitLab.
+                        </li>
+                        <li>Data Management: The software enables universities and schools to manage data for teachers,
+                            students, and staff members. This could include storing and organizing information such as
+                            personal details, attendance records, grades, schedules, and more.</li>
+                        <li>Assigning Sections and Tasks: The system allows for the assignment of sections or classes to
+                            teachers and students. It also facilitates the allocation of tasks or assignments to
+                            students by their respective teachers. This feature can help streamline the process of
+                            distributing and managing educational materials.</li>
+                        <li>Admin Management: The software includes a high-level authority account, typically called an
+                            admin account. The admin has control over the management of teachers, students, and staff
+                            members. They can perform tasks like user management, data access control, and system
+                            configuration.</li>
+                        <li>Responsive Design: The software's user interface is designed to be responsive, meaning it
+                            can adapt and provide an optimal user experience across different devices such as mobile
+                            phones, tablets, and laptops. This ensures accessibility and usability for users regardless
+                            of their device preference.</li>
+                        <li>React Components and API Fetching: React is a popular JavaScript library for building user
+                            interfaces. The software utilizes React components to create modular, reusable, and
+                            interactive UI elements. API fetching refers to the process of retrieving data from a server
+                            or database using API (Application Programming Interface) calls. This allows the software to
+                            dynamically fetch and display data to users.</li>
+                        <li>Database Binding: The software likely integrates with a database to store and retrieve the
+                            necessary information. Binding the database involves connecting the frontend application to
+                            the backend database, enabling seamless data synchronization and manipulation.</li>
+                        <li>Team Management and GitLab: Team management features may include user roles and permissions,
+                            collaboration tools, and communication channels within the software. GitLab is a web-based
+                            DevOps platform that provides version control for source code and facilitates team
+                            collaboration. It can be used for managing the software development process, including code
+                            repositories, issue tracking, and continuous integration/continuous deployment (CI/CD)
+                            pipelines.</li>
+                        <li>Outcome: Working of React components and Api fetching and binding of database ,Team
+                            management and Use of gitlabs</li>
+
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img src="./Screenshot (811).png" alt="">
+                </div>
+
+                <div class="col-12 mt-3 text-center">
+                    <p><span>NYKAA E-COMMERCE | HTML, CSS, JAVASCRIPT | AUGUST 2022</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul>
+                        <li>
+                            Overview: The project involves creating the front end of a responsive e-commerce website. It includes several
+                            components such as a navigation bar, a shopping cart, and a sign-in/sign-out page. The goal is to demonstrate
+                            the implementation of these features using HTML, JavaScript, and responsive design principles.
+                        </li>
+                        <li>Navigation Bar: The website will have a navigation bar that allows users to easily browse different sections of
+                            the website, such as product categories, special offers, and customer support.
+                        </li>
+                        <li> Shopping Cart: Users will be able to add products to their shopping cart and view the contents of the cart. The
+                            cart should provide options for adjusting quantities, removing items, and proceeding to the checkout process.
+                        </li>
+                        <li> Sign In / Sign Out Page: The website will include a sign-in/sign-out page where users can log in to their
+                            accounts or create new ones. It should have appropriate validation and error handling to ensure a smooth user
+                            experience.</li>
+                        <li>
+                            Responsive Design: The front end will be designed to be responsive, meaning it will adapt and display
+                            appropriately on different devices and screen sizes. This ensures a consistent and user-friendly experience
+                            across desktops, tablets, and mobile devices.</li>
+                        <li>Outcome: The outcome of this project will be a functional front-end implementation of an e-commerce website. It will
+                            demonstrate the proper usage of HTML for structuring the website's content, JavaScript for adding interactivity and
+                            dynamic behavior, and responsive design techniques for creating a user-friendly experience on various devices.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img src="./Screenshot (812).png" alt="">
+                </div>
+
+                <div class="col-12 mt-3 text-center">
+                    <p><span>MOBILE PORTFOLIO WEBSITE | PHP, LARAVEL, SQL | APRIL 2022</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul>
+                        <li>
+                            Overview: The project involves creating a portfolio website for mobile phones using PHP and the Laravel
+                            framework. The website will showcase various mobile phone models, their specifications, and other relevant
+                            information. It will also incorporate features such as user registration, login, and the ability for users to
+                            leave comments or reviews on mobile phones.
+                        </li>
+                        <li>Mobile Phone Showcase: The website will include a catalog of mobile phone models, displaying their images,
+                            specifications, and other details. Users can browse through the collection and view information about each
+                            phone.
+                    
+                    
+                    
+                    
+                    
+                        </li>
+                        <li> User Registration and Login: The website will provide a user registration system, allowing visitors to create
+                            an account. Registered users will be able to log in to the website, which enables them to access additional
+                            features and personalize their experience.</li>
+                        <li>Comments and Reviews: Users who are logged in will have the ability to leave comments or reviews on specific
+                            mobile phone models. This feature promotes user engagement and allows visitors to share their opinions and
+                            experiences.</li>
+                        <li> Backend Functionality: The project will utilize PHP and the Laravel framework for handling the backend
+                            functionality. This includes processing user registrations and logins, managing the mobile phone database,
+                            storing comments and reviews, and retrieving data from the database to display on the website.</li>
+                    
+                        <li>The outcome of this project will be a fully functional portfolio website for mobile phones, built using PHP and
+                            Laravel. It will demonstrate your proficiency in PHP and Laravel framework, as well as your understanding of how
+                            to work with databases using SQL. Additionally, the project will showcase your skills in front-end web
+                            development, including HTML and JavaScript, as you will be responsible for designing and implementing the user
+                            interface.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="./Screenshot (812).png" alt=""> -->
+                </div>
+
+
+                <div class="col-12 mt-3 text-center">
+                    <p><span>CONATCT BOOK USING PYTHON | PYTHON, TKINTER, SQL| OCTOBER 2020</span></p>
+                </div>
+                <div class="col-12 text-center">
+                    <ul>
+                        <li>
+                            Overview: The application provided a user-friendly graphical user interface (GUI) for adding, deleting, and
+                            editing contacts. This project allowed me to gain hands-on experience with Tkinter, a popular Python GUI
+                            toolkit, and integrate it with a MySQL database for data storage and retrieval.
+                        </li>
+                        <li>User-friendly Interface: The application offered an intuitive interface that facilitated easy navigation and
+                            interaction with the contact book functionalities.
+                    
+                    
+                        </li>
+                        <li> Contact Management: Users could add new contacts to the book by providing details such as name, phone number,
+                            email address, and additional notes.</li>
+                        <li> Contact Editing: The application enabled users to update existing contact information, such as modifying phone
+                            numbers or email addresses.
+                            Contact Deletion: Users had the ability to remove contacts from the book, allowing for efficient contact
+                            management.</li>
+                        <li>
+                            Database Integration: The application utilized MySQL, a widely used relational database management system, to
+                            store and retrieve contact information securely.</li>
+                        <li> Data Validation: The application implemented validation checks to ensure that users entered valid contact
+                            details, minimizing errors and maintaining data integrity.</li>
+                        <li>By developing this contact book application, I successfully demonstrated my proficiency in Python programming,
+                            particularly in working with Tkinter for creating GUI applications. I also gained experience in integrating
+                            Python applications with databases, specifically using MySQL for data storage and retrieval. This project
+                            allowed me to enhance my problem-solving skills, as well as my ability to design user-friendly interfaces for
+                            practical applications.
+                    
+                            The implementation of this project showcased my ability to work with various technologies and libraries commonly
+                            used in software development. It served as evidence of my competence in Python, Tkinter, and SQL, making it a
+                            valuable addition to my portfolio and CV.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- <img src="./Screenshot (812).png" alt=""> -->
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+    <div class='cursor4' id="cursor4"></div>
+
+    <a href="./pranshu yadav xoxo.pdf" class="link-to-portfolio hover-target" target=”_blank”> </a>
+    <!-- <p>
+        <a href="" download>
+            <button class="download-button">Download Resume</button>
+        </a>
+    </p> -->
+    <script>
+
+
+
+        (function ($) {
+            "use strict";
+
+            //Page cursors
+
+            document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
+                t.style.left = n.clientX + "px",
+                    t.style.top = n.clientY + "px",
+                    e.style.left = n.clientX + "px",
+                    e.style.top = n.clientY + "px",
+                    i.style.left = n.clientX + "px",
+                    i.style.top = n.clientY + "px"
+            });
+            var t = document.getElementById("cursor"),
+                e = document.getElementById("cursor2"),
+                p = document.getElementById("cursor4"),
+                i = document.getElementById("cursor3");
+            function n(t) {
+                e.classList.add("hover"), i.classList.add("hover")
+            }
+            function s(t) {
+                e.classList.remove("hover"), i.classList.remove("hover")
+            }
+            s();
+            for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+                o(r[a])
+            }
+            function o(t) {
+                t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+            }
+
+
+            //About page
+
+            $(".about-text").on('click', function () {
+                $("body").addClass("about-on");
+            });
+            $(".about-close").on('click', function () {
+                $("body").removeClass("about-on");
+            });
+
+
+            //Contact page
+
+            $(".contact-text").on('click', function () {
+                $("body").addClass("contact-on");
+            });
+            $(".contact-close").on('click', function () {
+                $("body").removeClass("contact-on");
+            });
+
+
+            //Travel portfolio page
+
+            $(".travel").on('click', function () {
+                $("body").addClass("travel-on");
+            });
+            $(".travel-close").on('click', function () {
+                $("body").removeClass("travel-on");
+            });
+
+
+            //Wildlife portfolio page
+
+            $(".wildlife").on('click', function () {
+                $("body").addClass("wildlife-on");
+            });
+            $(".wildlife-close").on('click', function () {
+                $("body").removeClass("wildlife-on");
+            });
+
+
+            //Nature portfolio page
+
+            $(".nature").on('click', function () {
+                $("body").addClass("nature-on");
+            });
+            $(".nature-close").on('click', function () {
+                $("body").removeClass("nature-on");
+            });
+            // ..........
+            $(".projects").on('click', function () {
+                $("body").addClass("projects-on");
+            });
+            $(".projects-close").on('click', function () {
+                $("body").removeClass("projects-on");
+            });
+
+
+        })(jQuery); 
+    </script>
+</body>
+
+</html>
